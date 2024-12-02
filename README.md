@@ -141,7 +141,7 @@ Enable the following flags by navigating to the URLs in the Chrome address bar:
   **Note**: Language packs will automatically download when you select a language pair for the first time, so this step is optional.
 
 
-<h2 style="color:red;">Quick Test (Using Pre-built <code>dist</code>)</h2>
+## 🔴 Quick Test (Using Pre-built `dist`)
 - A pre-built `dist` folder is included in the project folder for immediate testing. 
    1. Open Chrome Canary
    2. Navigate to `chrome://extensions/`
