@@ -73,6 +73,13 @@ Table of Contents
 
 ---
 
+<a href="[https://www.youtube.com/watch?v=VIDEO_ID](https://youtu.be/f0YiFZvrJcw?si=-8DY_n1ItumHOQm1)">
+  <img src="https://github.com/user-attachments/assets/cffd8c8a-214c-4493-a3e0-16d1684dd0f1" alt="Click to Watch Video" width="300">
+</a>
+
+---
+
+
 ## Built with Chrome's AI APIs
 
 Gemini Spark leverages the following APIs:
@@ -80,13 +87,6 @@ Gemini Spark leverages the following APIs:
 - **Prompt API**: Content generation and text transformation.
 - **Summarization API**: Summarize selected content and tab content.
 - **Language API**: Real-time translation and language detection.
-
----
-<a href="https://www.youtube.com/watch?v=VIDEO_ID">
-  <img src="https://github.com/user-attachments/assets/cffd8c8a-214c-4493-a3e0-16d1684dd0f1" alt="Click to Watch Video" width="300">
-</a>
-
----
 
 ## Installation
 
