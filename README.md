@@ -141,9 +141,14 @@ Enable the following flags by navigating to the URLs in the Chrome address bar:
   **Note**: Language packs will automatically download when you select a language pair for the first time, so this step is optional.
 
 
-## Quick Test (Using Pre-built `dist`)
-- A pre-built `dist` folder is included for immediate testing.  
-- **Skip to Step A** if you just want to test the extension.
+<h2 style="color:red;">Quick Test (Using Pre-built <code>dist</code>)</h2>
+- A pre-built `dist` folder is included in the project folder for immediate testing. 
+   1. Open Chrome Canary
+   2. Navigate to `chrome://extensions/`
+   3. Enable "Developer mode" in the top-right corner
+   4. Click "Load unpacked" in the top-left
+   5. Navigate to your project's `dist` folder and select it
+   6. The extension should now appear in your toolbar
 
 ---
 
@@ -164,14 +169,7 @@ npm install
 # Build the extension
 npm run build
    ```
-A. **Load in Chrome Canary**:
-   1. Download and install [Chrome Canary](https://www.google.com/chrome/canary/)
-   2. Open Chrome Canary
-   3. Navigate to `chrome://extensions/`
-   4. Enable "Developer mode" in the top-right corner
-   5. Click "Load unpacked" in the top-left
-   6. Navigate to your project's `dist` folder and select it
-   7. The extension should now appear in your toolbar
+
 
 **Note**: For the best testing experience, using Chrome Canary is a must as it provides the latest AI features and APIs.
 
