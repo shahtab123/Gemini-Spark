@@ -91,8 +91,6 @@ Gemini Spark leverages the following APIs:
 
 ## Installation
 
-# Enable and Use AI Features in Chrome Canary
-
 Follow these steps to enable and use AI features in Chrome Canary:
 
 ## Step 1: Open Chrome Canary
@@ -137,33 +135,36 @@ Enable the following flags by navigating to the URLs in the Chrome address bar:
 2. Locate **Optimization Guide On Device Model** and click `Download`.  
    Note: The download may take some time.
 
-## Step 5: (Optional) Install Language Packs
+## Step 5: Install Language Packs
 - Go to: `chrome://on-device-translation-internals`
 - Install the language packs you want to use.  
   **Note**: Language packs will automatically download when you select a language pair for the first time, so this step is optional.
 
 
-2. **Quick Test (Using Pre-built dist)**:
-   - A pre-built `dist` folder is included for immediate testing
-   - Skip to step 4 if you just want to test the extension
+## Quick Test (Using Pre-built `dist`)
+- A pre-built `dist` folder is included for immediate testing.  
+- **Skip to Step A** if you just want to test the extension.
 
-3. **Build from Source** (Optional):
-   ```bash
-   # Clone the repository
-   git clone <repository-url>
-   cd gemini-spark
+---
 
-   # Remove existing dist folder
-   rm -rf dist
+## Build from Source (Optional)
+Follow these steps to build the extension from the source code:
 
-   # Install dependencies
-   npm install
+```bash
+# Clone the repository
+git clone <repository-url>
+cd gemini-spark
 
-   # Build the extension
-   npm run build
+# Remove existing dist folder
+rm -rf dist
+
+# Install dependencies
+npm install
+
+# Build the extension
+npm run build
    ```
-
-4. **Load in Chrome Canary (Recommended for Testing)**:
+A. **Load in Chrome Canary**:
    1. Download and install [Chrome Canary](https://www.google.com/chrome/canary/)
    2. Open Chrome Canary
    3. Navigate to `chrome://extensions/`
@@ -172,12 +173,7 @@ Enable the following flags by navigating to the URLs in the Chrome address bar:
    6. Navigate to your project's `dist` folder and select it
    7. The extension should now appear in your toolbar
 
-5. **Load in Chrome (Version 122+)**:
-   - Open Chrome and navigate to `chrome://extensions/`
-   - Enable "Developer mode"
-   - Click "Load unpacked" and select the `dist` folder
-
-**Note**: For the best testing experience, we recommend using Chrome Canary as it provides the latest AI features and APIs.
+**Note**: For the best testing experience, using Chrome Canary is a must as it provides the latest AI features and APIs.
 
 ---
 
@@ -186,62 +182,11 @@ Enable the following flags by navigating to the URLs in the Chrome address bar:
 1. Open Gemini Spark from the extension toolbar.
 2. Select a Google Workspace application or tool.
 3. Choose the desired AI feature and follow the instructions.
+4. Watch the demo video to gent an overall idea
 
 ### Debugging and Monitoring
 
 All features include detailed console logging for debugging and verification:
-
-1. **Access Console Logs**:
-   - Right-click anywhere → "Inspect" (or press F12)
-   - Select the "Console" tab
-   - Filter logs by typing "Gemini-Spark:" in the console filter
-
-2. **Log Categories**:
-   ```javascript
-   // Feature initialization
-   console.log("Gemini-Spark: [Feature] initialized")
-   
-   // API calls
-   console.log("Gemini-Spark: Calling [API_Name]", parameters)
-   
-   // Success responses
-   console.log("Gemini-Spark: [Operation] completed", result)
-   
-   // Errors and warnings
-   console.error("Gemini-Spark: Error in [Feature]", error)
-   console.warn("Gemini-Spark: Warning - [Message]")
-   ```
-
-3. **Common Log Patterns**:
-   - Model Loading: `"Gemini-Spark: Loading [model_name] - Progress: X%"`
-   - API Status: `"Gemini-Spark: [API_Name] status: ready/error"`
-   - Feature Usage: `"Gemini-Spark: Using [feature_name] with params:"`
-   - Performance: `"Gemini-Spark: Operation completed in Xms"`
-
-4. **Error Codes**:
-   - `GS-001`: API initialization error
-   - `GS-002`: Model loading failed
-   - `GS-003`: Permission error
-   - `GS-004`: Network error
-   - `GS-005`: Invalid input
-
-Example of checking if features are working:
-```javascript
-// Gmail Smart Compose
-"Gemini-Spark: Smart Compose initialized"
-"Gemini-Spark: Loading language model - Progress: 100%"
-"Gemini-Spark: Suggestion generated in 150ms"
-
-// Translation
-"Gemini-Spark: Translation model ready"
-"Gemini-Spark: Translating [en->es]"
-"Gemini-Spark: Translation completed"
-
-// Summarization
-"Gemini-Spark: Summarizer initialized"
-"Gemini-Spark: Processing text (length: X)"
-"Gemini-Spark: Summary generated"
-```
 
 ---
 
