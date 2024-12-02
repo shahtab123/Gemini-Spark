@@ -89,14 +89,27 @@ Gemini Spark leverages the following APIs:
 ## Installation
 
 1. **Prerequisites**:
-   - Chrome version 122 or higher.
-   - Enable experimental AI features in `chrome://flags`.
+   - Chrome version 122 or higher, or Chrome Canary (recommended for testing)
+   - Enable experimental AI features:
+     1. Open Chrome/Chrome Canary
+     2. Navigate to `chrome://flags`
+     3. Search for "Generative AI" 
+     4. Enable "Generative AI features in Chrome"
+     5. Enable "Extension Generative AI APIs"
+     6. Restart browser when prompted
 
-2. **Installation Steps**:
+2. **Quick Test (Using Pre-built dist)**:
+   - A pre-built `dist` folder is included for immediate testing
+   - Skip to step 4 if you just want to test the extension
+
+3. **Build from Source** (Optional):
    ```bash
    # Clone the repository
    git clone <repository-url>
    cd gemini-spark
+
+   # Remove existing dist folder
+   rm -rf dist
 
    # Install dependencies
    npm install
@@ -105,10 +118,21 @@ Gemini Spark leverages the following APIs:
    npm run build
    ```
 
-3. **Load the Extension**:
-   - Open Chrome and navigate to `chrome://extensions/`.
-   - Enable "Developer mode."
-   - Click "Load unpacked" and select the `dist` folder.
+4. **Load in Chrome Canary (Recommended for Testing)**:
+   1. Download and install [Chrome Canary](https://www.google.com/chrome/canary/)
+   2. Open Chrome Canary
+   3. Navigate to `chrome://extensions/`
+   4. Enable "Developer mode" in the top-right corner
+   5. Click "Load unpacked" in the top-left
+   6. Navigate to your project's `dist` folder and select it
+   7. The extension should now appear in your toolbar
+
+5. **Load in Chrome (Version 122+)**:
+   - Open Chrome and navigate to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked" and select the `dist` folder
+
+**Note**: For the best testing experience, we recommend using Chrome Canary as it provides the latest AI features and APIs.
 
 ---
 
@@ -117,6 +141,62 @@ Gemini Spark leverages the following APIs:
 1. Open Gemini Spark from the extension toolbar.
 2. Select a Google Workspace application or tool.
 3. Choose the desired AI feature and follow the instructions.
+
+### Debugging and Monitoring
+
+All features include detailed console logging for debugging and verification:
+
+1. **Access Console Logs**:
+   - Right-click anywhere → "Inspect" (or press F12)
+   - Select the "Console" tab
+   - Filter logs by typing "Gemini-Spark:" in the console filter
+
+2. **Log Categories**:
+   ```javascript
+   // Feature initialization
+   console.log("Gemini-Spark: [Feature] initialized")
+   
+   // API calls
+   console.log("Gemini-Spark: Calling [API_Name]", parameters)
+   
+   // Success responses
+   console.log("Gemini-Spark: [Operation] completed", result)
+   
+   // Errors and warnings
+   console.error("Gemini-Spark: Error in [Feature]", error)
+   console.warn("Gemini-Spark: Warning - [Message]")
+   ```
+
+3. **Common Log Patterns**:
+   - Model Loading: `"Gemini-Spark: Loading [model_name] - Progress: X%"`
+   - API Status: `"Gemini-Spark: [API_Name] status: ready/error"`
+   - Feature Usage: `"Gemini-Spark: Using [feature_name] with params:"`
+   - Performance: `"Gemini-Spark: Operation completed in Xms"`
+
+4. **Error Codes**:
+   - `GS-001`: API initialization error
+   - `GS-002`: Model loading failed
+   - `GS-003`: Permission error
+   - `GS-004`: Network error
+   - `GS-005`: Invalid input
+
+Example of checking if features are working:
+```javascript
+// Gmail Smart Compose
+"Gemini-Spark: Smart Compose initialized"
+"Gemini-Spark: Loading language model - Progress: 100%"
+"Gemini-Spark: Suggestion generated in 150ms"
+
+// Translation
+"Gemini-Spark: Translation model ready"
+"Gemini-Spark: Translating [en->es]"
+"Gemini-Spark: Translation completed"
+
+// Summarization
+"Gemini-Spark: Summarizer initialized"
+"Gemini-Spark: Processing text (length: X)"
+"Gemini-Spark: Summary generated"
+```
 
 ---
 
