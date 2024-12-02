@@ -72,6 +72,7 @@ Table of Contents
   - Customizable summary output.
 
 ---
+## Extension demo
 
 <a href="https://youtu.be/f0YiFZvrJcw?si=-8DY_n1ItumHOQm1">
   <img src="https://github.com/user-attachments/assets/cffd8c8a-214c-4493-a3e0-16d1684dd0f1" alt="Click to Watch Video" width="300">
