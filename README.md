@@ -91,15 +91,57 @@ Gemini Spark leverages the following APIs:
 
 ## Installation
 
-1. **Prerequisites**:
-   - Chrome version 122 or higher, or Chrome Canary (recommended for testing)
-   - Enable experimental AI features:
-     1. Open Chrome/Chrome Canary
-     2. Navigate to `chrome://flags`
-     3. Search for "Generative AI" 
-     4. Enable "Generative AI features in Chrome"
-     5. Enable "Extension Generative AI APIs"
-     6. Restart browser when prompted
+# Enable and Use AI Features in Chrome Canary
+
+Follow these steps to enable and use AI features in Chrome Canary:
+
+## Step 1: Open Chrome Canary
+Ensure you have Chrome Canary installed and open it.
+
+## Step 2: Enable Flags
+Enable the following flags by navigating to the URLs in the Chrome address bar:
+
+1. **Optimization Guide On Device Model**  
+   - Go to: `chrome://flags/#optimization-guide-on-device-model`
+   - Set it to: `Enabled BypassPerfRequirement`
+
+2. **Prompt API for Gemini Nano**  
+   - Go to: `chrome://flags/#prompt-api-for-gemini-nano`
+   - Set it to: `Enabled`
+
+3. **Summarization API for Gemini Nano**  
+   - Go to: `chrome://flags/#summarization-api-for-gemini-nano`
+   - Set it to: `Enabled`
+
+4. **Translation API Without Language Pack Limit**  
+   - Go to: `chrome://flags/#translation-api`
+   - Set it to: `Enabled without language pack limit`
+
+## Step 3: Use the Developer Console
+1. Open the developer console:
+   - macOS: Press `Option + ⌘ + J`
+   - Windows/Linux: Press `Shift + CTRL + J`
+
+2. Paste the following code snippets:
+   - To create the language model:
+     ```javascript
+     await ai.languageModel.create()
+     ```
+   - To create the summarizer:
+     ```javascript
+     await ai.summarizer.create()
+     ```
+
+## Step 4: Download the AI Model
+1. Go to: `chrome://components`
+2. Locate **Optimization Guide On Device Model** and click `Download`.  
+   Note: The download may take some time.
+
+## Step 5: (Optional) Install Language Packs
+- Go to: `chrome://on-device-translation-internals`
+- Install the language packs you want to use.  
+  **Note**: Language packs will automatically download when you select a language pair for the first time, so this step is optional.
+
 
 2. **Quick Test (Using Pre-built dist)**:
    - A pre-built `dist` folder is included for immediate testing
