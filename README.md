@@ -83,7 +83,7 @@ Gemini Spark leverages the following APIs:
 
 ---
 [![Video Title](![528-5288626_click-to-watch-video-hd-png-download](https://github.com/user-attachments/assets/cffd8c8a-214c-4493-a3e0-16d1684dd0f1))](https://www.youtube.com/watch?v=VIDEO_ID)
-
+![528-5288626_click-to-watch-video-hd-png-download](https://github.com/user-attachments/assets/cffd8c8a-214c-4493-a3e0-16d1684dd0f1)
 ---
 
 ## Installation
