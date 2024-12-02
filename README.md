@@ -157,8 +157,8 @@ Follow these steps to build the extension from the source code:
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd gemini-spark
+git clone https://github.com/shahtab123/Gemini-Spark
+cd Gemini-Spark
 
 # Remove existing dist folder
 rm -rf dist
