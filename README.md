@@ -174,14 +174,6 @@ npm run build
 **Note**: For the best testing experience, using Chrome Canary is a must as it provides the latest AI features and APIs.
 
 ---
-
-## Usage
-
-1. Open Gemini Spark from the extension toolbar.
-2. Select a Google Workspace application or tool.
-3. Choose the desired AI feature and follow the instructions.
-4. Watch the demo video to gent an overall idea
-
 ### Debugging and Monitoring
 
 All features include detailed console logging for debugging and verification:
@@ -249,8 +241,6 @@ gemini-spark/
 ├── background.js            # Service worker for extension
 └── manifest.json            # Extension configuration
 ```
-
-
 
 ## API Implementation Examples
 
